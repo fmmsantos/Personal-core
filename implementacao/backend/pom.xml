@@ -43,11 +43,12 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
-		<!-- mYsQL -->
+		<!-- postgres -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
+          <groupId>org.postgresql</groupId>
+          <artifactId>postgresql</artifactId>
+                <scope>runtime</scope>
+             </dependency>
 		
 	</dependencies>
 
