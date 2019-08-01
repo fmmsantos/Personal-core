@@ -2,12 +2,17 @@ package com.fabisoft.personal.enuns;
 
 public enum Velocidade {
 	LEVE("Leve"),
-	MODERADA("Moderada"),
-	INTENSO("Intenso");
+	MOD("Moderada"),
+	INTEN("Intenso");
 	
-	public String velocidade;
-	Velocidade(String velocidade){
-		this.velocidade = velocidade;
+	private String nome;
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	Velocidade(String nome){
+		this.nome = nome;
 		
 	}
 

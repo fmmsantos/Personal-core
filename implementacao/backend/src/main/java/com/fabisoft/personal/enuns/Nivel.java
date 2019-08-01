@@ -1,14 +1,18 @@
 package com.fabisoft.personal.enuns;
 
 public enum Nivel {
-	INICIANTE("A"),
-	INTERMEDIARIO("B"),
-	AVANCADO("C");
+	INIC("A"),
+	INTERM("B"),
+	AVANC("C");
 	
-	public String sigla;
+	private String sigla;
 
 	Nivel(String sigla) {
 		this.sigla = sigla;
+	}
+
+	public String getSigla() {
+		return sigla;
 	}
 
 	

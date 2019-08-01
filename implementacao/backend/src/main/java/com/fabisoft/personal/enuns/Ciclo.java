@@ -1,14 +1,18 @@
 package com.fabisoft.personal.enuns;
 
 public enum Ciclo {
-	MICROCICLO("Microciclo"),
-	MESOCICLO("Mesociclo"),
-	MACROCICLO("Macrociclo");
+	MICROC("Microciclo"),
+	MESO("Mesociclo"),
+	MACRO("Macrociclo");
 	
-	public String ciclo;
-	Ciclo(String ciclo){
-		this.ciclo = ciclo;
+	private String nome;
+	Ciclo(String nome){
+		this.nome = nome;
 		
 	}
+	public String getNome() {
+		return nome;
+	}
+	
 
 }

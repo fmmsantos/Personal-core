@@ -1,33 +1,34 @@
 package com.fabisoft.personal.enuns;
 
 public enum Sistema {
-	
-	seriesMultiplas("Series Multiplas"),
-	seriesCombinadas("Series Combinadas"),
-	piramides("Pirâmides"),
-	biSet ("Bi-set"),
-	triSet("Tri-set"),
-	superSet("Super-set"),
-	dropSet("Drop-set"),
-	tripSet("Trip-set"),
-	stripSet("Strip-set"),
-	picoContracao("pico de Contração"),
-	set21("set-21"),
-	preExautao("Pré-Exautao"),
-	exaustao("Exautão"),
-	restPause("Rest pause"),
-	fadigaExcentrica("Fadiga Excentrica"),
-	repeticaoParcial("Repeticão Parcial"),
-	seisVinte("6x20"),
-	ExcentricaOuNegativa("Excentrica ou Negativa"),
-	OclusaoVascular("Oclusão Vascular"),
-	fst7("FST-7"),
-	gvt("GVT");
-	
-	public String sistema;
-	Sistema(String sistema){
-		this.sistema=sistema;
+	SM("SERIES MULTIPLAS"),
+	SERIECOMB("SERIES COMBINADAS"),
+	PIRAM("PIRÂMIDES"),
+	BISET ("BI-SET"),
+	TRISET("TRI-SET"),
+	SUPSET("SUPER-SET"),
+	DRSET("DROP-SET"),
+	TRIPSET("TRIP-SET"),
+	STRIPSET("STRIP-SET"),
+	PICOCONTR("PICO DE CONTRAÇÃO"),
+	SET21("SET-21"),
+	PREEXA("PRÉ-EXAUTAO"),
+	EXAUSTAO("EXAUTÃO"),
+	RESTPAUSE("REST PAUSE"),
+	FADIGAEXC("FADIGA EXCENTRICA"),
+	REPETPARC("REPETICÃO PARCIAL"),
+	SEISVINT("6X20"),
+	EXCOUNEG("EXCENTRICA OU NEGATIVA"),
+	OCLUSVASC("OCLUSÃO VASCULAR"),
+	FST7("FST-7"),
+	GVT("GVT");
+	public String nome;
+	private Sistema(String nome){
+		this.nome=nome;
 		
+	}
+	public String getNome() {
+		return nome;
 	}
 	
 	

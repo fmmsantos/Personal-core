@@ -5,9 +5,12 @@ public enum Divisao {
 	AB("A/B"),
 	ABC("A/B/C");
 	
-	public String divisao;
-	Divisao(String divisao){
-		this.divisao = divisao;
+	private String nome;
+	Divisao(String nome){
+		this.nome = nome;
+	}
+	public String getNome() {
+		return nome;
 	}
 
 }

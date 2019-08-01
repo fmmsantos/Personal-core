@@ -1,15 +1,18 @@
 package com.fabisoft.personal.enuns;
 
 public enum Metodo {
-	ALTERNADO("Alternado por segmento corporal"),
-	LOCALIZADO("Localizado por articulação"),
-	CIRCUITO("Circuito"),
+	ALTER("Alternado por segmento corporal"),
+	LOCALI("Localizado por articulação"),
+	CIRC("Circuito"),
 	AGANT("Agonista/Antagonista"),
-	DIRECIONADO("Direcionado por grupamento Muscular");
+	DIREC("Direcionado por grupamento Muscular");
 	
-	public String metodo;
-	Metodo(String metodo){
-		this.metodo = metodo;
+	private String nome;
+	Metodo(String nome){
+		this.nome = nome;
+	}
+	public String getNome() {
+		return nome;
 	}
 
 }
