@@ -20,15 +20,15 @@ public class EstruturaTreinamento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	private int numeroExerc;
-	private int numeroSerie;
-	private int repeticoes;
-	private int intervalo;
-	private int frequeSemanal;
-	private int serieTotal;
-	private int numeroTreino;
-	private int numerosemana;
+	@Column(nullable = false,unique = false)
+	private Integer numeroExerc;
+	private Integer numeroSerie;
+	private Integer repeticoes;
+	private Integer intervalo;
+	private Integer frequeSemanal;
+	private Integer serieTotal;
+	private Integer numeroTreino;
+	private Integer numerosemana;
 	@Enumerated(EnumType.STRING)
 	private Divisao divisao;
 	@Enumerated(EnumType.STRING)
