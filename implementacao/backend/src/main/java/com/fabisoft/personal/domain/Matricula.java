@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class Matricula {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@OneToOne
 	private Aluno aluno;

@@ -18,7 +18,7 @@ import com.fabisoft.personal.enuns.Velocidade;
 @Table(name = "tb_estruTrein")
 public class EstruturaTreinamento {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private int numeroExerc;
