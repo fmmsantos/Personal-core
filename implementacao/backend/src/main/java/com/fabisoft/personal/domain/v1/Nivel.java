@@ -9,7 +9,7 @@ public class Nivel {
 	public Nivel() {
 		this.fases=new ArrayList<Fase>();
 	}
-	public String getNome() {
+	public String getNome(){
 		return nome;
 	}
 	public void setNome(String nome) {
