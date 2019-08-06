@@ -22,6 +22,8 @@ public class EstruturaTreinamento {
 	private Long id;
 	@Column(nullable = false,unique = false)
 	private Integer numeroExerc;
+	
+	
 	private Integer numeroSerie;
 	private Integer repeticoes;
 	private Integer intervalo;
@@ -33,6 +35,7 @@ public class EstruturaTreinamento {
 	private Divisao divisao;
 	@Enumerated(EnumType.STRING)
 	private Metodo metodo;
+
 	@Enumerated(EnumType.STRING)
 	private Nivel nivel;
 	@Enumerated(EnumType.STRING)
@@ -40,58 +43,59 @@ public class EstruturaTreinamento {
 	@Enumerated(EnumType.STRING)
 	private Velocidade velocidade;
 	
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public int getNumeroExerc() {
+	public Integer getNumeroExerc() {
 		return numeroExerc;
 	}
-	public void setNumeroExerc(int numeroExerc) {
+	public void setNumeroExerc(Integer numeroExerc) {
 		this.numeroExerc = numeroExerc;
 	}
-	public int getNumeroSerie() {
+	public Integer getNumeroSerie() {
 		return numeroSerie;
 	}
-	public void setNumeroSerie(int numeroSerie) {
+	public void setNumeroSerie(Integer numeroSerie) {
 		this.numeroSerie = numeroSerie;
 	}
-	public int getRepeticoes() {
+	public Integer getRepeticoes() {
 		return repeticoes;
 	}
-	public void setRepeticoes(int repeticoes) {
+	public void setRepeticoes(Integer repeticoes) {
 		this.repeticoes = repeticoes;
 	}
-	public int getIntervalo() {
+	public Integer getIntervalo() {
 		return intervalo;
 	}
-	public void setIntervalo(int intervalo) {
+	public void setIntervalo(Integer intervalo) {
 		this.intervalo = intervalo;
 	}
-	public int getFrequeSemanal() {
+	public Integer getFrequeSemanal() {
 		return frequeSemanal;
 	}
-	public void setFrequeSemanal(int frequeSemanal) {
+	public void setFrequeSemanal(Integer frequeSemanal) {
 		this.frequeSemanal = frequeSemanal;
 	}
-	public int getSerieTotal() {
+	public Integer getSerieTotal() {
 		return serieTotal;
 	}
-	public void setSerieTotal(int serieTotal) {
+	public void setSerieTotal(Integer serieTotal) {
 		this.serieTotal = serieTotal;
 	}
-	public int getNumeroTreino() {
+	public Integer getNumeroTreino() {
 		return numeroTreino;
 	}
-	public void setNumeroTreino(int numeroTreino) {
+	public void setNumeroTreino(Integer numeroTreino) {
 		this.numeroTreino = numeroTreino;
 	}
-	public int getNumerosemana() {
+	public Integer getNumerosemana() {
 		return numerosemana;
 	}
-	public void setNumerosemana(int numerosemana) {
+	public void setNumerosemana(Integer numerosemana) {
 		this.numerosemana = numerosemana;
 	}
 	public Divisao getDivisao() {
