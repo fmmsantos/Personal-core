@@ -10,7 +10,6 @@ public class TesteNivel {
 		Nivel nivel = new Nivel();
 		nivel.setNome("INICIANTE");
 		
-		
 		Fase fase = new Fase();
 		fase.setNome("A1");
 		fase.setNumeroExercicios(new Repeticao(5));
