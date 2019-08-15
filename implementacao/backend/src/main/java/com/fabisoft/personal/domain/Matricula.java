@@ -11,10 +11,10 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 
-@Entity
+//@Entity
 public class Matricula {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@OneToOne
 	private Aluno aluno;

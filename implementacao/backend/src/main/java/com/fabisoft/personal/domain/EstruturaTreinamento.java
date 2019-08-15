@@ -14,11 +14,11 @@ import com.fabisoft.personal.enuns.Metodo;
 import com.fabisoft.personal.enuns.Nivel;
 import com.fabisoft.personal.enuns.Sistema;
 import com.fabisoft.personal.enuns.Velocidade;
-@Entity
+//@Entity
 @Table(name = "tb_estruTrein")
 public class EstruturaTreinamento {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(nullable = false,unique = false)
 	private Integer numeroExerc;
