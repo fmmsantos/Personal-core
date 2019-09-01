@@ -13,11 +13,11 @@ public class Nivel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String nome;
-	private List<Fase> fases;
+	//private List<Fase> fases;
 	
 	
 	public Nivel() {
-		this.fases=new ArrayList<Fase>();
+		//this.fases=new ArrayList<Fase>();
 	}
 	public String getNome(){
 		return nome;
@@ -25,11 +25,12 @@ public class Nivel {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	/*
 	public List<Fase> getFases() {
 		return fases;
 	}
 	public void addFase(Fase fase) {
 		this.fases.add(fase);
 	}
-	
+	*/
 }

@@ -7,6 +7,7 @@ import com.fabisoft.personal.enuns.Velocidade;
 
 public class TesteNivel {
 	public static void main(String[] args) {
+		/*
 		Nivel nivel = new Nivel();
 		nivel.setNome("INICIANTE");
 		
@@ -26,7 +27,8 @@ public class TesteNivel {
 		fase.setNumeroTreino(new Repeticao(12,18));
 		fase.setRepeticoes(new Repeticao(10,12));
 	
-	
+		*/
+		/*
 		
 		nivel.addFase(fase);
 		
@@ -34,7 +36,8 @@ public class TesteNivel {
 			System.out.println(f);
 			System.out.println(f.getSeries().getMaximo());
 		});
-		System.out.println(nivel.getNome());
+		*/
+		//System.out.println(nivel.getNome());
 		
 	}
 }

@@ -1,6 +1,9 @@
 package com.fabisoft.personal.domain.v1;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -8,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+import com.fabisoft.personal.enuns.Ciclo;
 import com.fabisoft.personal.enuns.Divisao;
 import com.fabisoft.personal.enuns.Metodo;
 import com.fabisoft.personal.enuns.Sistema;
@@ -16,28 +21,85 @@ import com.fabisoft.personal.enuns.Velocidade;
 public class Fase {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@Column(length = 20,insertable = false)
 	private String nome;
-	@Column(insertable = false)
+
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="nexerc_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="nexerc_max"))
+    })
 	private Repeticao numeroExercicios;
-	@Column(insertable = false)
+	
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="ser_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="ser_max"))
+    })
 	private Repeticao series;
-	@Enumerated(EnumType.STRING)
-	private Metodo metodo;
-	@Column(insertable = false)
+	
+	
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="ns_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="ns_max"))
+    })
 	private Repeticao numeroSerie;
-	@Column(insertable = false)
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="rep_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="rep_max"))
+    })
 	private Repeticao repeticoes;
-	@Column(insertable = false)
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="interval_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="interval_max"))
+    })
 	private Repeticao intervalo;
-	@Column(insertable = false)
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="fs_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="fs_max"))
+    })
 	private Repeticao frequeSemanal;
-	@Column(insertable = false)
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="st_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="st_max"))
+    })
 	private Repeticao serieTotal;
-	@Column(insertable = false)
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="nt_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="nt_max"))
+    })
 	private Repeticao numeroTreino;
-	@Column(insertable = false)
+	@Embedded
+	@AttributeOverrides({
+        @AttributeOverride(name="minimo",
+                           column=@Column(name="nrsem_min")),
+        @AttributeOverride(name="maximo",
+                           column=@Column(name="nrsem_max"))
+    })
+	//ENUNS
 	private Repeticao numerosemana;
 	@Enumerated(EnumType.STRING)
 	private Divisao divisao;
@@ -45,14 +107,24 @@ public class Fase {
 	private Sistema sistema;
 	@Enumerated(EnumType.STRING)
 	private Velocidade velocidade;
+	@Enumerated(EnumType.STRING)
+	private Ciclo ciclo;
+	@Enumerated(EnumType.STRING)
+	private Metodo metodo;
+		
 	
 	
+	public Ciclo getCiclo() {
+		return ciclo;
+	}
+	public void setCiclo(Ciclo ciclo) {
+		this.ciclo = ciclo;
+	}
 	
-	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public Repeticao getNumeroSerie() {

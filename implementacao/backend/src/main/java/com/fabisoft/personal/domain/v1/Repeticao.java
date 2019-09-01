@@ -1,5 +1,8 @@
 package com.fabisoft.personal.domain.v1;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Repeticao {
 	private Integer minimo;
 	private Integer maximo;
@@ -26,5 +29,7 @@ public class Repeticao {
 	public String toString() {
 		return "[min=" + minimo + ", max=" + maximo + "]";
 	}
-	
+	public Repeticao() {
+		
+	}
 }

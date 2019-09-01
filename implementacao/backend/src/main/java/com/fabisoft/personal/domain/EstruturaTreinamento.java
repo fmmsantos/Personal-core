@@ -11,14 +11,14 @@ import javax.persistence.Table;
 
 import com.fabisoft.personal.enuns.Divisao;
 import com.fabisoft.personal.enuns.Metodo;
-import com.fabisoft.personal.enuns.Nivel;
+
 import com.fabisoft.personal.enuns.Sistema;
 import com.fabisoft.personal.enuns.Velocidade;
 //@Entity
 @Table(name = "tb_estruTrein")
 public class EstruturaTreinamento {
-	//@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(nullable = false,unique = false)
 	private Integer numeroExerc;
@@ -36,8 +36,7 @@ public class EstruturaTreinamento {
 	@Enumerated(EnumType.STRING)
 	private Metodo metodo;
 
-	@Enumerated(EnumType.STRING)
-	private Nivel nivel;
+	
 	@Enumerated(EnumType.STRING)
 	private Sistema sistema;
 	@Enumerated(EnumType.STRING)
@@ -110,12 +109,7 @@ public class EstruturaTreinamento {
 	public void setMetodo(Metodo metodo) {
 		this.metodo = metodo;
 	}
-	public Nivel getNivel() {
-		return nivel;
-	}
-	public void setNivel(Nivel nivel) {
-		this.nivel = nivel;
-	}
+	
 	public Sistema getSistema() {
 		return sistema;
 	}

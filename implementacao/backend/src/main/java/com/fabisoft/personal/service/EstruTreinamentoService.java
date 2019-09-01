@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 import com.fabisoft.personal.domain.EstruturaTreinamento;
 import com.fabisoft.personal.enuns.Divisao;
 import com.fabisoft.personal.enuns.Metodo;
-import com.fabisoft.personal.enuns.Nivel;
+
 import com.fabisoft.personal.enuns.Velocidade;
 import com.fabisoft.personal.repository.EstruTreinamRepository;
 
 @Service
 public class EstruTreinamentoService {
-	@Autowired private EstruTreinamRepository repository;
+	//@Autowired private EstruTreinamRepository repository;
 	// nivel
 	public void salvar(EstruturaTreinamento entidade) {
 		//if(entidade.getNivel()==null )
@@ -58,12 +58,12 @@ public class EstruTreinamentoService {
 	 		throw new RuntimeException("Não podemos salvar treinamento sem Velocidade");
 	 		
 			    }
-	 	 repository.save(entidade);
+	 	// repository.save(entidade);
 		 }
 	
 	public void nsei(EstruturaTreinamento entidade) {
-		if(entidade.getNivel()==Nivel.INIC) {
-			entidade.setNumeroSerie(entidade.getNivel().getNumeroSerie());
+	//	if(entidade.getDivisao()()==Divisao.AB) {
+			entidade.setNumeroSerie(entidade.getFrequeSemanal());
 			entidade.setIntervalo(1);
 			entidade.setVelocidade(Velocidade.MOD);
 			entidade.setFrequeSemanal(3);
@@ -72,7 +72,7 @@ public class EstruTreinamentoService {
 			entidade.setNumeroTreino(12);
 			entidade.setNumerosemana(4);
 		}
-		repository.save(entidade);
+		//repository.save(entidade);
 	}
 	
 		
@@ -80,4 +80,4 @@ public class EstruTreinamentoService {
 	
 	
 	
-}
+
