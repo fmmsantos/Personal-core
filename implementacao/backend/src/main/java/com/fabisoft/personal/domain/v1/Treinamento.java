@@ -12,11 +12,22 @@ public class Treinamento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	//private Nivel nivel;
 	@ManyToOne
 	@JoinColumn(name = "cd_fase")
 	private Fase faseAtual;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Fase getFaseAtual() {
+		return faseAtual;
+	}
+	public void setFaseAtual(Fase faseAtual) {
+		this.faseAtual = faseAtual;
+	}
 	
 	
 }

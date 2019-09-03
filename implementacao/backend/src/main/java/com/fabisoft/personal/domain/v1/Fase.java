@@ -111,7 +111,14 @@ public class Fase {
 	private Ciclo ciclo;
 	@Enumerated(EnumType.STRING)
 	private Metodo metodo;
-		
+	
+	private boolean excluido;
+	public boolean isExcluido() {
+		return excluido;
+	}
+	public void setExcluido(boolean excluido) {
+		this.excluido = excluido;
+	}
 	
 	
 	public Ciclo getCiclo() {

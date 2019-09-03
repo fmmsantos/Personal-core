@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,9 +29,9 @@ public class FaseResource {
 		return fases; 
 	}
 	@GetMapping("/{id}")
-	public Optional<Fase> listarId(@PathVariable Long id) {
-		Optional<Fase> fases= faseRepo.findById(id);
-		return fases;
+	public Fase buscarId(@PathVariable Long id) {
+		Optional<Fase> resultado= faseRepo.findById(id);
+		return resultado.isPresent()?resultado.get():null;
 			
 	}
 	
@@ -42,8 +43,23 @@ public class FaseResource {
 	
 	 @DeleteMapping("/{id}")
 	 public void remove(@PathVariable Long id){
+		Optional<Fase> resultado = faseRepo.findById(id);
+		//if(resultado.isPresent()) {
+			//faseRepo.delete(resultado.get());
+			//outra opcap
+			Fase fase = resultado.get();
+			fase.setExcluido(true);
+			faseRepo.save(fase);
+			
+	 }
+	 @PutMapping("/{id}")
+	 public Fase editar(@PathVariable Long id,@RequestBody Fase fase ) {
+	 Optional<Fase> f = faseRepo.findById(id);
+	 return  faseRepo.save(fase);
+	 
 	
-		
+		 
+	 	
 	 }
 
 }
