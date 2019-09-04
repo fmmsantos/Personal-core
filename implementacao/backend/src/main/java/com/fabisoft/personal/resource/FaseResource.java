@@ -53,13 +53,9 @@ public class FaseResource {
 			
 	 }
 	 @PutMapping("/{id}")
-	 public Fase editar(@PathVariable Long id,@RequestBody Fase fase ) {
-	 Optional<Fase> f = faseRepo.findById(id);
-	 return  faseRepo.save(fase);
-	 
-	
-		 
-	 	
+	 public Fase editar(@RequestBody Fase fase ) {
+		 return  faseRepo.save(fase);
 	 }
 
 }
+
